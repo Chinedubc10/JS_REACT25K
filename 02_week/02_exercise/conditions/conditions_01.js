@@ -1,10 +1,12 @@
-/* 
-Write a function named checkAdult:
-Take an age as a parameter.
-If age is 18 or older, return "You are an adult."
-Otherwise, return nothing.
-Call the function with different ages and print the result.
- */
+/*
+  Create a function named checkAdult that:
+    - Accepts an age as a parameter
+    - Returns "You are an adult." if the age is 18 or older
+    - Returns nothing otherwise
+  
+  Call the function with several age values and print the results.
+*/
+
 
 
 const checkAge = age => console.log(age >= 18 ? "You are an adult." : null);
