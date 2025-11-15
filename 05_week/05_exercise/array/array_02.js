@@ -2,10 +2,17 @@
 let myAlphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G'];
 
 /*
-Create a function called myAlphabetLength that logs the length of the myAlphabet array.
-If the length is 5 or more, log: "Array length is sufficient".
-Otherwise, log: "Array length is too short."
+  Define a function named `myAlphabetLength` that performs the following tasks:
+
+    1. Access the `myAlphabet` array and determine its length.
+    2. Log the length of the array to the console.
+    3. Check if the length is at least 5:
+        - If yes, log "Array length is sufficient".
+        - If no, log "Array length is too short".
+
+  This function helps verify whether the array contains enough elements for further processing.
 */
+
 // Write your function here
 
 function checkAlphabetLength() {
