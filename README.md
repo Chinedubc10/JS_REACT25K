@@ -1,5 +1,59 @@
 # Programming in JavaScript - REACT25K
 
+## GitHub JavaScript repo:
+https://github.com/Chinedubc10/JS_REACT25K
+
+## Completed Tasks
+- week_01
+  - [x] data_types
+  - [x] operators
+  - [x] variables
+ 
+- week_02:
+   - [x] basic_functions
+   - [x] conditions
+   - [x] numbers
+   - [x] strings
+
+- week_03:
+  - [x] github
+  - [x] 8_ball
+  - [x] loops
+
+- week_04:
+  - [x] ATM simulator
+  - [x] basic DOM
+  - [x] pancake maker version1
+  - [x] forms
+
+- week_05:
+  - [x] array1
+  - [x] pancake maker version2
+
+- week_06:
+   - [x] objects
+   - [x] little zoo version 1
+   - [x] little zoo version 2
+
+- week_07:
+   - [x] pancake maker version3
+   - [x] JSON
+   - [x] localStorage
+
+- week_08:
+  - [x] JS writing practice
+  - [x] error handling
+  - [x] DOM_manipulation
+  - [x] Fault_findings
+
+- week_09:
+   - [x] async.js
+   - [x] chaining.js
+   - [x] destructuring.js
+   - [x] spread-rest.js
+
+
+
 Welcome to the JavaScript Programming Course Material repository!
 This repository contains all the resources, source code, and homework exercises for our comprehensive JavaScript programming course.
 
