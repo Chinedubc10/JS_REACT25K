@@ -6,3 +6,7 @@ Print both results using console.log().
 Example output:
 "HELLO, WORLD!"
 "hello, world!" */
+
+const greeting = "Hello, World!";
+
+console.log(greeting.toUpperCase(), greeting.toLowerCase());

@@ -4,3 +4,11 @@ This is line two.
 This is line three.
 Print the multiLine variable using console.log(). 
 */
+
+
+const multiLine = `
+This is line one,
+This is line two,
+This is line three.`
+
+console.log(multiLine);

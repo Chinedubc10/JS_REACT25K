@@ -7,3 +7,22 @@ Print the result using console.log().
 Hint: Use Math.random(), Math.floor(), and simple math.
 
 */
+
+function generateRandomNumber(min, max) {
+    return Math.floor(Math.random() * (max - min) + min);
+}
+console.log(generateRandomNumber(1, 10));
+
+// Alternative
+
+const generateRandomNumberOne = (min, max) => {
+    return Math.floor(Math.random() * (max - min) + min);
+}
+console.log(generateRandomNumberOne(1, 10));
+
+// Alternative Two
+
+const generateRandomNumberTwo = (min, max) => 
+    Math.floor(Math.random() * (max - min) + min);
+
+console.log(generateRandomNumberTwo(1, 10));

@@ -26,3 +26,4 @@ Follow these steps:
 4. Display the result:
 - Log the randomly selected answer to the console.
 - Show the answer in an`alert()`.
+

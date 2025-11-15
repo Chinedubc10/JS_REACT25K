@@ -9,3 +9,13 @@ Example output:
 "Final description: javascript is fun and amazing!"
 "Does it include 'fun'? true"
  */
+
+const description = " JavaScript is Fun and powerful! ";
+const finalDescription = description.trim().replace("powerful", "amazing").toLowerCase();
+const hasFun = finalDescription.includes("fun");
+
+if (hasFun) {
+  console.log(`"Final description: ${finalDescription}"\n"Does it include 'fun'? true"`);
+} else {
+  console.log("Incorrect result");
+}

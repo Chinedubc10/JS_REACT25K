@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <title>Pancake Maker</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <div class="container">
@@ -13,16 +13,20 @@
       </div>
 
       <div class="form-container">
-        <h2>Customize Your Pancake</h2>
+        <h1>Customize Your Pancake</h1>
 
         <form id="pancakeForm">
           <!-- Customer Name -->
           <label for="customerName">Your Name:</label>
-          <input type="text" id="customerName" placeholder="Enter your name" />
+          <input
+            type="text"
+            id="customerName"
+            name="customerName"
+            placeholder="Enter your name"/>
 
           <!-- Pancake Type -->
           <label for="type">Choose your pancake type:</label>
-          <select id="type">
+          <select id="type" name="pancakeType">
             <option data-price="5">Classic - 5€</option>
             <option data-price="6">Chocolate - 6€</option>
             <option data-price="7">Blueberry - 7€</option>
@@ -87,13 +91,18 @@
 
           <!-- See Order Button -->
           <button type="button" id="seeOrder">See Order</button>
-        </form>
+        
+        <button type="button" id="confirmOrder">Confirm Order</button>
 
         <!-- Order Summary Display -->
-        <div id="orderSummary">
-          <h3>Order Summary</h3>
-          <p id="summaryText">Your order details will appear here.</p>
+        <div class="order_summary_container">
+          <div id="orderSummary">
+            <h2>Order Summary</h2>
+            <p id="summaryText">Your order details will appear here.</p>
+          </div>
         </div>
+      </form>
+
       </div>
     </div>
 

@@ -6,3 +6,8 @@ Otherwise, return nothing.
 Call the function with different ages and print the result.
  */
 
+
+const checkAge = age => console.log(age >= 18 ? "You are an adult." : null);
+
+checkAge();
+

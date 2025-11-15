@@ -4,3 +4,9 @@ Print the result using console.log().
 Example output:
 "Does the phrase include 'powerful'? true"
  */
+
+const phrase = "JavaScript is versatile and powerful.";
+const isWord = phrase.includes("powerful");
+
+console.log(`Does the phrase include 'powerful'? ${isWord}`);
+

@@ -7,3 +7,13 @@ For any other score, return "Grade C".
 Call the function with scores like 85 and 75 and print the result. 
 */
 
+
+const getGrade = score => console.log(
+  score >= 90 ? "Grade A" : 
+  score >= 80 ? "Grade B" : 
+  "Grade C"
+);
+
+getGrade(75);
+getGrade(85);
+

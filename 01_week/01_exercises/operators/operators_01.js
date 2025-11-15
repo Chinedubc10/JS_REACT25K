@@ -13,3 +13,11 @@
 */
 
 
+let a = 8;
+let b = 3;
+let sumA = a - b; //Subtraction;
+let sumB = a * b; //Multiplication;
+let sumC = a / b; //Division;
+let sumE = a % b; //Reminder;
+
+console.log(sumA, ",", sumB, ",", sumC, ",", sumE, ".");

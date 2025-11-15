@@ -12,3 +12,12 @@ Example for 5:
 ...
 5 x 10 = 50
  */
+
+function generateMultiplicationTable() {
+  const number = Number(prompt("Enter a number:"));
+  for (let i = 1; i <= 50; i++) {
+    console.log(`${number} * ${i} = ${number * i}`);
+  }
+}
+
+generateMultiplicationTable();

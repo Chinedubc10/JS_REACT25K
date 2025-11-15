@@ -6,3 +6,9 @@ Use a ternary operator to return:
 "Not a fox, but still cool!" otherwise.
 Call the function with values like "fox" and "cat". 
 */
+
+const checkAnimal = (type) => 
+  console.log(type === "fox" ? "You have a clever companion!" : "Not a fox but still cool!");
+
+checkAnimal("fox");
+checkAnimal("cat");

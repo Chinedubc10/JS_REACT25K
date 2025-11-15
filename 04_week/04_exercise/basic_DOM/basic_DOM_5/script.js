@@ -8,3 +8,12 @@ Write JavaScript to:
 - Change the background color to a random color when the button is clicked.
 - Update the paragraph’s text color to match the user’s input valu
 */
+
+function colorChange() {
+  document.body.style.backgroundColor = `#${Math.floor(Math.random() * 0xFFFFFF).toString(16)}`;
+}
+
+function changeText() {
+  const inputColor = document.getElementById("input").value;
+  document.getElementById("text").style.color = inputColor;
+}

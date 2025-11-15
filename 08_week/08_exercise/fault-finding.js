@@ -14,7 +14,7 @@ If no name is provided, return "Hello, guest!".
 */
 
 function greet(name) {
-    return "Hello " + Name;
+    return "Hello " + name;
 }
 
 // Debug & Test
@@ -39,9 +39,8 @@ Should return `true` if number is even, otherwise `false`.
 */
 
 function isEven(num) {
-    return num % 2 = 0;
+    return num % 2 == 0 ? true : false;
 }
-
 // Debug & Test
 console.log(isEven(4)); // Expected: true
 console.log(isEven(7)); // Expected: false

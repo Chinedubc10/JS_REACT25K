@@ -6,3 +6,7 @@ Print both results using console.log().
 Example output:
 "First character: J"
 "Last character: t" */
+
+const word1 = "JavaScript";
+console.log(`\"First character: ${word1[0]}"  
+"Last character: ${word1[9]}\"`);

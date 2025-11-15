@@ -7,3 +7,22 @@ If it’s the weekend OR sunny, return "Good day, but not perfect."
 Otherwise, return "Maybe another day."
 Call the function with different combinations of conditions. 
 */
+
+const planAdventure = (isWeekend, isSunny, likesFoxes) => {
+  if (isWeekend && isSunny && likesFoxes) {
+    console.log("Perfect day for a fox adventure!");
+  } else if (isWeekend || isSunny) {
+    console.log("Good day, but not perfect.");
+  } else {
+    console.log("Maybe another day.");
+  }
+};
+
+planAdventure(true, true, false);
+planAdventure(true, true, true);
+planAdventure(true, false, true);
+planAdventure(false, true, false);
+planAdventure(false, false, false);
+planAdventure(true, false, false);
+planAdventure(false, false, true);
+planAdventure(false, true, true);

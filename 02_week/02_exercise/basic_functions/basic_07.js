@@ -7,3 +7,22 @@ Print the result using console.log().
 Bonus: Modify the function to use implicit return. 
 
 */
+
+function containsWord(sentence, word) {
+    return sentence.includes(word);
+}
+console.log(containsWord("JavaScript is fun!", "fun"));
+
+/*Alternative*/
+
+const containsWord1 = (sentence, word) => {
+    return sentence.includes(word);
+}
+console.log(containsWord1("JavaScript is fun!", "fun"))
+
+/*Alternative Two*/
+
+const containsWordTwo = (sentence, word) =>
+    sentence.includes(word);
+
+console.log(containsWordTwo("JavaScript is fun!", "fun"));

@@ -6,3 +6,16 @@ Print the results using console.log().
 
 Bonus: Modify the function to use implicit return. 
 */
+
+// Standard function
+function isEven(num) {
+  return num % 2 === 0;
+}
+
+console.log(isEven(18));
+
+// Arrow function
+const isEven1 = (num) => num % 2 === 0;
+
+console.log(isEven1(19));
+console.log(isEven1(28));

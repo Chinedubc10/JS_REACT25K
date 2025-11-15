@@ -18,7 +18,7 @@ Extract the first two colors from the colors array.
 const colors = ["red", "blue", "green", "yellow"];
 
 // Fix this
-const primary, secondary = colors;
+const [primary, secondary] = colors;
 
 console.log(primary, secondary); // Expected: "red blue"
 
@@ -62,3 +62,9 @@ Test with `{ brand: "Toyota", year: 2020 }`.
 */
 
 // Write your code here
+
+function carFactory(car) {
+    const {brand, year} = car;
+    console.log( `${brand}, ${year}`);
+}
+carFactory({brand: "BMW", year:1992});

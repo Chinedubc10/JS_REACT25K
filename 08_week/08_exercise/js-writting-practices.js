@@ -10,6 +10,18 @@ task1(); // Logs: "Strict mode error: variable is not defined"
 
 function task1() {
     // Code here
+
+    "use strict";
+
+function task1() {
+  try {
+    const test = undeclared - 1;
+  } catch (error) {
+    console.error("Strict mode error:", error.message);
+  }
+}
+
+task1();
 }
 
 /* Task 2: Declare Variables Correctly
@@ -24,6 +36,19 @@ Expected:
 
 function task2() {
     // Code here
+    function task2() {
+  const MAX_USERS = 100;
+  let currentUsers = 10;
+
+  try {
+    MAX_USERS = currentUsers; 
+  } catch (err) {
+    console.error(`Alarm, alarm: ${err.message}`);
+  }
+}
+
+task2();
+
 }
 
 /* Task 3: Create and Log an Object
@@ -40,7 +65,16 @@ Expected:
 
 function task3() {
     // Code here
+    
+    const userProfile = {
+        name: 'Alice',
+        email: 'alice@email.com',
+        isAdmin: true
+    }
+    console.log(userProfile);
 }
+task3();
+
 
 /* Task 4: Write a Simple Function
 /*
@@ -53,7 +87,10 @@ calculateArea(5, 10) → 50
 
 function calculateArea(width, height) {
     // Code here
+    return width * height;
 }
+console.log(calculateArea(10, 5));
+
 
 /* Task 5: Avoid Magic Numbers
 /*
@@ -67,7 +104,10 @@ applyDiscount(100) → 90
 const DISCOUNT = 0.1;
 function applyDiscount(price) {
     // Code here
+return price - (price * DISCOUNT);
 }
+console.log(applyDiscount(100));
+
 
 /* Task 6: Write Useful Comments
 /*
@@ -80,7 +120,17 @@ greetUser("Bob") → "Hello, Bob!"
 
 function greetUser(name) {
     // Code here
+
+    // Check the name to be a valid value
+    if (name.length > 0 && isNaN) {
+        // If it is, log the message
+        return console.log(`Hello, ${name}!`);
+    } else {
+        // If it's not, log the message
+        console.log('Please enter the a prooper name!');
+    }
 }
+greetUser('Bob');
 
 /* Task 7: Refactor Unclear Code
 /*
@@ -95,7 +145,16 @@ After:
 
 function checkNumber(n) {
     // Code here
+
+      if(num > 0) {
+        return console.log('The number is positive');
+    }else if(num < 0) {
+        return console.log('The number is negative');
+    } else {
+        return console.log('Number is zero');
+    }
 }
+checkNumber(0);
 
 /* Task 8: Fix Formatting
 /*

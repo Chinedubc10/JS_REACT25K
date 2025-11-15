@@ -8,3 +8,13 @@ Write a function named createWordPyramid:
     cod
     code
  */
+
+
+    function createWordPyramid() {
+  const word = prompt("Enter a word:");
+  for (let i = 1; i <= word.length; i++) {
+    console.log(word.slice(0, i));
+  }
+}
+
+createWordPyramid();

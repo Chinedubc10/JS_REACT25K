@@ -8,6 +8,14 @@ Otherwise, log: "Array length is too short."
 */
 // Write your function here
 
+function checkAlphabetLength() {
+  const length = myAlphabet.length;
+  console.log(length);
+  console.log(length >= 5 ? "Array length is sufficient" : "Array length is too short");
+}
+
+checkAlphabetLength();
+
 
 
 // Exercise 2: Iterate over the planets array and log each planet with its index
@@ -22,6 +30,9 @@ Expected outcome:
 */
 // Write your code here
 
+for (let i in planets) {
+  console.log(`Planet: ${planets[i]}, Index: ${i}`);
+}
 
 
 // Exercise 3: Log array items with their types using mixedValues array
@@ -36,6 +47,11 @@ Expected outcome:
 */
 // Write your code here
 
+for (let i = 0; i < mixedValues.length; i++) {
+  const item = mixedValues[i];
+  console.log(`Item: ${item}, Index: ${i}, Type: ${typeof item}`);
+}
+
 
 
 // Exercise 4: Log each item of myArr without using a loop
@@ -46,6 +62,11 @@ Log each item in myArr without explicitly using a loop.
 Expected outcome: 1, "Dog", 3.14, false
 */
 // Write your code here
+
+console.log(myArr[0]);
+console.log(myArr[1]);
+console.log(myArr[2]);
+console.log(myArr[3]);
 
 
 
@@ -61,6 +82,12 @@ Expected outcome:
 */
 // Write your code here
 
+for (const animal of reserve1Animals) {
+  if (reserve2Animals.includes(animal)) {
+    console.log(`Common species: ${animal}`);
+  }
+}
+
 
 
 // Exercise 6: Log each letter of names from the animalNames array
@@ -75,6 +102,9 @@ Expected outcome:
 */
 // Write your code here
 
+animalNames.forEach(name => {
+  console.log(`Letters in '${name}': ${name.split('').join(', ')}`);
+});
 
 
 // Exercise 7: Filter only positive temperatures from the temperatures array
@@ -87,6 +117,9 @@ Expected outcome: [5, 15, 20, 2]
 */
 // Write your function here
 
+const getPositiveTemperatures = () => temperatures.filter(t => t > 0);
+
+console.log(getPositiveTemperatures());
 
 
 // Exercise 8: Find the index of "Fox" in the zooAnimals array
@@ -98,6 +131,8 @@ Expected outcome: "Index of Fox: 3"
 */
 // Write your code here
 
+const index = zooAnimals.indexOf('Fox');
+console.log('Index of Fox:', index);
 
 
 // Exercise 9: Try to find the index of an animal not in zooAnimals
@@ -108,6 +143,9 @@ Expected outcome: -1
 */
 // Write your code here
 
+if (!zooAnimals.includes('Penguin')) {
+  console.log("Penguin is not in the zoo.");
+}
 
 
 // Exercise 10: Replace "Giraffe" with "Cheetah" in zooAnimals
@@ -117,6 +155,10 @@ Expected outcome: ['Elephant', 'Cheetah', 'Panda', 'Fox', 'Kangaroo']
 */
 // Write your code here
 
+const GiraffeIndex = zooAnimals.indexOf('Giraffe');
+if (index > -1) zooAnimals[index] = 'Cheetah';
+
+console.log(zooAnimals);
 
 
 // Exercise 11: Sort the safariAnimals array alphabetically
@@ -128,7 +170,8 @@ Expected outcome: ['Elephant', 'Gazelle', 'Leopard', 'Zebra']
 */
 // Write your code here
 
-
+safariAnimals.sort();
+console.log(safariAnimals);
 
 // Exercise 12: Reverse the order of the safariAnimals array
 /*
@@ -136,6 +179,9 @@ Reverse the order of the safariAnimals array.
 Expected outcome: ['Zebra', 'Leopard', 'Gazelle', 'Elephant']
 */
 // Write your code here
+
+safariAnimals.reverse();
+console.log(safariAnimals);
 
 
 
@@ -148,7 +194,8 @@ false (if it does not)
 */
 // Write your code here
 
-
+let isTigerInZoo = zooAnimals.includes('Tiger');
+console.log(isTigerInZoo);
 
 // Exercise 14: Find all occurrences of "John" in attendees
 let attendees = ['John', 'Sarah', 'John', 'Alex', 'John'];
@@ -159,6 +206,12 @@ Expected outcome: [0, 2, 4]
 */
 // Write your code here
 
+const johnIndexes = attendees.reduce((indexes, attendee, i) => {
+  if (attendee === 'John') indexes.push(i);
+  return indexes;
+}, []);
+
+console.log(johnIndexes);
 
 
 // Exercise 15: Convert all names in attendees array to uppercase
@@ -168,6 +221,8 @@ Expected outcome: ['JOHN', 'SARAH', 'JOHN', 'ALEX', 'JOHN']
 */
 // Write your code here
 
+let uppercaseAttendees = attendees.map(name => name.toUpperCase());
+console.log(uppercaseAttendees);
 
 
 // Exercise 16: Merge forestAnimals and farmAnimals arrays
@@ -180,7 +235,8 @@ Expected outcome: ['Deer', 'Bear', 'Wolf', 'Cow', 'Sheep', 'Goat']
 */
 // Write your code here
 
-
+let mergedAnimals = forestAnimals.concat(farmAnimals);
+console.log(mergedAnimals);
 
 // Exercise 17: Remove first and last elements from birdSpecies
 let birdSpecies = ['Eagle', 'Owl', 'Hawk', 'Sparrow', 'Penguin'];
@@ -191,6 +247,10 @@ Expected outcome: ['Owl', 'Hawk', 'Sparrow']
 */
 // Write your code here
 
+birdSpecies.shift();
+birdSpecies.pop(); 
+
+console.log(birdSpecies);
 
 
 // Exercise 18: Use `splice` to remove and replace elements in numbers
@@ -202,7 +262,8 @@ Expected outcome: [10, 20, 25, 27, 40, 50]
 */
 // Write your code here
 
-
+ numbers.splice(2, 1, 25, 27);
+console.log(numbers);
 
 // Exercise 19: Increase each price by 10% using `map`
 let prices = [5, 10, 15, 20];
@@ -213,6 +274,8 @@ Expected outcome: [5.5, 11, 16.5, 22]
 */
 // Write your function here
 
+const increasedPrices = prices.map(p => p * 1.1);
+console.log(increasedPrices);
 
 
 // Exercise 20: Filter words longer than 5 letters using `filter`
@@ -223,3 +286,7 @@ Create a new array containing only words longer than 5 letters from the words ar
 Expected outcome: ['banana', 'cherry', 'strawberry']
 */
 // Write your function here
+
+
+let longWords = words.filter(word => word.length > 5);
+console.log(longWords); 

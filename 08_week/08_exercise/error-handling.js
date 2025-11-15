@@ -11,7 +11,14 @@ task1(); // Should log: "Error caught: function is not defined"
 
 function task1() {
     // Your code here
+     try { 
+        return testFunction();
+     } catch(error) {
+        console.error(`Error caught: ${error.message}`);
+     }
 }
+task1();
+
 
 /* Task 2: Handle ReferenceError
 /*
@@ -24,6 +31,16 @@ task2(); // Should log: "ReferenceError caught: myVariable is not defined"
 
 function task2() {
     // Your code here
+    function task2() {
+    // Your code here
+    try {
+        console.log(num);
+    } catch (error){
+        console.error(`ReferenceError caught: ${error.message}'`)
+    }
+}
+task2();
+
 }
 
 /* Task 3: Using Finally
@@ -36,6 +53,18 @@ task3(); // Should log an error message and "Task completed."
 
 function task3() {
     // Your code here
+    function task3() {
+  try {
+    return testThree();
+  } catch (error) {
+    console.error(error.message);
+  } finally {
+    console.log('Task completed');
+  }
+}
+
+task3();
+
 }
 
 /* Task 4: Fix JSON Parsing Error
@@ -49,7 +78,16 @@ parseJSON("Invalid JSON text"); // Should log an error and return null
 
 function parseJSON(jsonString) {
     // Your code here
+    try {
+      const test = JSON.parse(jsonString);
+      console.log(test);
+    } catch (error) {
+        console.error(error.message);
+        return null;
+    }
 }
+console.log(parseJSON('{"name": Alice", "age": 25}'));
+
 
 /* Task 5: Throwing a Custom Error
 /*
@@ -62,6 +100,20 @@ checkAge(16); // Should log: "Error: You must be at least 18."
 
 function checkAge(age) {
     // Your code here
+    function checkAge(age) {
+    // Your code here
+    if (age < 18) {
+        throw new Error('Error: You must be at least 18.');
+    }
+    console.log('Access granted');
+    try {
+        checkAge(17);
+    } catch (error) {
+        console.error(error.message);
+    }
+}
+
+    
 }
 
 /* Task 6: Save and Retrieve from LocalStorage
@@ -78,11 +130,31 @@ console.log(getUser()); // Should log an error and return null
 
 function saveUser(user) {
     // Your code here
+    
+     function saveUser(user) {
+    localStorage.setItem('user', JSON.stringify(user));
+}
 }
 
 function getUser() {
     // Your code here
+    function getUser() {
+    try {
+        const storedValue = JSON.parse(localStorage.getItem('user'));   
+        return storedValue;
+    } catch (error) {
+        console.error("Error retrieving user data:", error.message);
+        return null;
+    }
 }
+}
+
+// Test cases
+saveUser({ name: "Alice", age: 25 }); // Should save user
+console.log(getUser()); // Should return { name: "Alice", age: 25 }
+
+localStorage.setItem("user", "{ invalid JSON }"); // Simulate corruption
+console.log(getUser());  // Should log an error and return null
 
 /* Task 7: Check if Object Property Exists
 /*
@@ -95,6 +167,19 @@ checkProperty({ name: "Bob", age: 30 }, "email"); // Should log "Property not fo
 
 function checkProperty(obj, key) {
     // Your code here
+
+    function checkProperty(obj, key) {
+    try {
+        if (!(key in obj)) throw new Error('Property not found!');
+        console.log(obj[key]);
+    } catch (err) {
+        console.error(`Alarm, alarm: ${err.message}`);
+    }
+}
+
+checkProperty({ name: "Bob", age: 30 }, "name");
+checkProperty({ name: "Bob", age: 30 }, "email");
+
 }
 
 /* Task 8: Fetch API Error Handling
@@ -108,6 +193,21 @@ fetchData("invalid-url"); // Should log network error
 
 async function fetchData(url) {
     // Your code here
+    async function fetchData(url) {
+    // Your code here
+    try {
+        const response = await fetch(url);
+        if (!response.ok) {
+        throw new Error(`Response status: ${response.status}`);
+        }
+        const json = await response.json();
+        console.log(json);
+    } catch (error) {
+        console.error(error.message);
+    }
+}
+fetchData("https://jsonplaceholder.typicode.com/users"); // Should log API data
+fetchData("invalid-url"); 
 }
 
 /* Task 9: Fix a URI Error
@@ -121,6 +221,18 @@ task9("%"); // Should log URIError
 
 function task9(malformedURI) {
     // Your code here
+
+    function task9(url) {
+  try {
+    console.log(decodeURIComponent(url));
+  } catch (err) {
+    console.error(`Alarm, alarm ${err.message}`);
+  }
+}
+
+task9("https%3A%2F%2Fexample.com"); // Should decode properly
+task9("%"); // Should log URIError
+
 }
 
 /* Task 10: Clear LocalStorage
@@ -133,4 +245,22 @@ clearStorage(); // Should log "LocalStorage cleared."
 
 function clearStorage() {
     // Your code here
+
+     try {
+    const itemCount = localStorage.length;
+
+    if (itemCount) {
+      console.log(`Local storage is not empty. ${itemCount} item${itemCount > 1 ? 's are' : ' is'} inside!`);
+    }
+
+    if (confirm('Are you sure you want to clear local storage?')) {
+      localStorage.clear();
+      console.log('Local storage is now empty!');
+    }
+  } catch (error) {
+    console.error(`Error: ${error.message}`);
+  }
 }
+
+clearStorage();
+

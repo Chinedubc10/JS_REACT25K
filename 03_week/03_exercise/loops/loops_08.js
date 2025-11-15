@@ -7,3 +7,19 @@ Write a function named findMinMax:
 - The largest number.
 Display the results in the console. 
 */
+
+const findMinMax = () => {
+  const count = Number(prompt("How many numbers will you enter?"));
+  let min = Infinity;
+  let max = -Infinity;
+
+  for (let i = 0; i < count; i++) {
+    const num = Number(prompt("Enter a number:"));
+    if (num < min) min = num;
+    if (num > max) max = num;
+  }
+
+  console.log(min, max);
+};
+
+findMinMax();

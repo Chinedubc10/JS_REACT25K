@@ -8,12 +8,19 @@ Convert the object into a JSON string and log it to the console.
 
 // Your code here
 
+const student = { name: "Lisa", age: 30, grade: "B" };
+console.log(JSON.stringify(student));
+
 /* Task 2
 Take the JSON string from Task 1 and convert it back into a JavaScript object.
 Log the `name` property of the converted object.
 */
 
 // Your code here
+
+const studentConverted = JSON.parse(studentJson);
+console.log(studentConverted);
+
 
 /* Task 3
 Create an array named `classroom`, where each element is an object representing a student.
@@ -23,12 +30,22 @@ Convert the array into a JSON string and log it to the console.
 
 // Your code here
 
+const classroom = [
+    {name: 'Ashley', age: 25, grade: 'A'},
+    {name: 'Chris', age: 28, grade: 'B'}
+]
+const classroomJson = JSON.stringify(classroom);
+console.log(classroomJson);
+
 /* Task 4
 Take the JSON string from Task 3, convert it back into a JavaScript array,
 and log the names of all students in the classroom.
 */
 
 // Your code here
+
+const classroomConverted = JSON.parse(classroomJson);
+console.log(classroomConverted);
 
 /* Task 5
 Create an object named `weatherReport` with the following properties:
@@ -42,6 +59,15 @@ Then, parse the JSON string back into an object and log the `conditions` propert
 
 // Your code here
 
+const weatherReport = {
+    temperature: 20,
+    humidity: 40,
+    conditions: 'Sunny'
+}
+const weatherJSON = JSON.stringify(weatherReport);
+const weatherConverted = JSON.parse(weatherJSON);
+console.log(weatherConverted.conditions);
+
 /* Task 6
 Define an array named `movies`, where each movie has:
 - `title`
@@ -54,6 +80,18 @@ Log all movie titles with a rating higher than 8.
 
 // Your code here
 
+const movies = [
+  { title: 'Lord of the Rings', director: 'Peter Jackson', rating: 9 },
+  { title: 'Alien', director: 'Ridley Scott', rating: 10 },
+  { title: 'The Matrix', director: 'Wachowski Brothers', rating: 8 }
+];
+
+const highRatedMovies = JSON.parse(JSON.stringify(movies));
+
+highRatedMovies
+  .filter(movie => movie.rating > 8)
+  .forEach(movie => console.log(movie.title));
+
 /* Task 7
 Write a function `filterHighRatedMovies(jsonString)` that:
 - Takes a JSON string representing an array of movie objects.
@@ -63,6 +101,11 @@ Write a function `filterHighRatedMovies(jsonString)` that:
 
 // Your code here
 
+const moviesFilter = (data) =>
+  JSON.parse(data).filter(movie => Number(movie.rating) > 8);
+
+console.log(moviesFilter(`[{"title":"Home Alone","rating":"10"}, {"title":"Alien 3","rating":"6"}]`));
+
 /* Task 8
 Define an object named `shoppingCart` with:
 - `items` (an array of product objects, each with `name` and `price`)
@@ -70,6 +113,18 @@ Convert `shoppingCart` into a JSON string and log it to the console.
 */
 
 // Your code here
+const shoppingCart = {
+    items: [{
+        name:'Apple',
+        price: 10
+    },
+    {
+        name: 'Milk',
+        price: 8
+    }]
+};
+const shoppingCartJson = JSON.stringify(shoppingCart);
+console.log(shoppingCartJson);
 
 /* Task 9
 Write a function `totalCartValue(jsonString)` that:
@@ -79,6 +134,10 @@ Write a function `totalCartValue(jsonString)` that:
 */
 
 // Your code here
+const totalCartValue = (cart) =>
+  JSON.parse(cart).reduce((sum, item) => sum + item.price, 0);
+
+console.log(totalCartValue(`[{"item":"Banana","price":5},{"item":"chocolate","price":6}]`));
 
 /* Task 10
 Create an object named `gameProgress` with:
@@ -92,3 +151,19 @@ Log the updated object.
 */
 
 // Your code here
+const gameProgress = {
+  level: 5,
+  score: 25,
+  livesRemaining: 2
+};
+
+const data = JSON.stringify(gameProgress);
+console.log(data);
+
+const updateScore = () => {
+  const updatedData = JSON.parse(data);
+  updatedData.score += 5;
+  console.log(updatedData);
+};
+
+updateScore();

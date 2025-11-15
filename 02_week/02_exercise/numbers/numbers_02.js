@@ -6,3 +6,6 @@ Print both results using console.log() with messages:
 "Price with 2 decimals: 19.57"
 "Price with no decimals: 20"
  */
+
+const price = 19.56789;
+console.log("Price with 2 decimals:", price.toFixed(2), "Price with no decimals:", price.toFixed(0));
