@@ -167,6 +167,7 @@ const products = [
     { name: "Laptop", price: 1200 },
     { name: "Phone", price: 800 },
     { name: "Mouse", price: 50 },
+    {name: "Car", price: 1900}
 ];
 
 function filterProducts(products, maxPrice) {
