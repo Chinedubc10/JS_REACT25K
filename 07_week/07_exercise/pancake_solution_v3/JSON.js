@@ -1,10 +1,18 @@
-/* Task 1
-Create a JavaScript object named `student` with properties:
-- `name`
-- `age`
-- `grade`
-Convert the object into a JSON string and log it to the console.
+/*
+  Task 1: Student Object to JSON
+
+  1. Create a JavaScript object named `student` with the following properties:
+     - `name`  : The student's name
+     - `age`   : The student's age
+     - `grade` : The student's current grade or level
+
+  2. Convert the `student` object into a JSON string using `JSON.stringify()`.
+
+  3. Log the resulting JSON string to the console.
+
+  This task demonstrates object creation and serialization in JavaScript.
 */
+
 
 // Your code here
 
