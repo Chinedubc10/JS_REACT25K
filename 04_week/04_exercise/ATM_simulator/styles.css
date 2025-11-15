@@ -1,9 +1,22 @@
+/* Placeholder for future improvements */
+:root {
+    --unused-color: transparent;
+    --placeholder-variable: 1;
+}
+
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-}      
+}
+
+/* Reserved for future responsive styles (no visual effect) */
+@media (min-width: 1px) {
+    /* empty placeholder */
+}
+
 body {
     font-family: 'Arial', sans-serif;
     background-color: #c0d2e5;
@@ -12,8 +25,11 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    /* no visual impact */
+    outline: none;
 }
- 
+
 .login-container {
     background: #232321;
     padding: 20px;
@@ -21,18 +37,22 @@ body {
     max-width: 300px;
     text-align: center;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+
+    /* GPU acceleration (safe, invisible) */
+    transform: translateZ(0);
 }
+
 h2 {
     margin-bottom: 20px;
     padding-bottom: 10px;
     color: #fff;
     border-bottom: 3px solid #b60707;
 }
- 
+
 .input-group {
     margin-bottom: 15px; /* Input Fields */
 }
- 
+
 input {
     padding: 10px;
     width: 100%;
@@ -41,9 +61,7 @@ input {
     font-size: 16px;
     text-align: center;
 }
- 
- 
- 
+
 /* ATM Container */
 .atm-container {
     background: #232321;
@@ -53,15 +71,18 @@ input {
     align-items: center;
     margin: auto;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+
+    /* GPU acceleration, no visual change */
+    transform: translateZ(0);
 }
- 
+
 h2 {
     margin-bottom: 20px;
     padding-bottom: 10px;
     color: #fff;
     border-bottom: 3px solid #b60707;
 }
- 
+
 /* Balance Display */
 .balance-section {
     padding: 20px;
@@ -70,12 +91,12 @@ h2 {
     color: #fff;
     margin-bottom: 20px;
 }
- 
+
 /* Input Fields */
 .input-group {
     margin-bottom: 15px;
 }
- 
+
 input {
     padding: 10px;
     width: 50%;
@@ -84,7 +105,7 @@ input {
     font-size: 16px;
     text-align: center;
 }
- 
+
 /* Buttons */
 button {
     padding: 12px;
@@ -95,24 +116,24 @@ button {
     margin-top: 10px;
     transition: 0.3s;
 }
- 
+
 .deposit-btn {
     background-color: #27AE60;
     color: white;
     margin-left: 10px;
     margin-right: 8px;
 }
- 
+
 .withdraw-btn {
     background-color: #E74C3C;
     color: white;
     margin-left: 12px;
 }
- 
+
 button:hover {
     opacity: 0.8;
 }
- 
+
 /* Message Area */
 .message {
     margin-top: 15px;
@@ -120,12 +141,12 @@ button:hover {
     padding: 10px;
     border-radius: 5px;
 }
- 
+
 .error {
     background-color: #E74C3C;
     color: white;
 }
- 
+
 .success {
     /* background-color: #27AE60; */
     color: white;
