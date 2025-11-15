@@ -15,7 +15,7 @@ console.log(fullName, jobTitle); // Expected: "Sarah Manager"
 Extract the first two colors from the colors array.  
 */
 
-const colors = ["red", "blue", "green", "yellow"];
+const colors = ["red", "blue", "green", "yellow", "indigo"];
 
 // Fix this
 const [primary, secondary] = colors;
