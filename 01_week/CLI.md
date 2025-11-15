@@ -84,3 +84,13 @@ CLI stands for:
 | `cls`              | clears the CLI window                |
 | `exit`             | close the CLI window                 |
 | `help `_`command`_ | Shows the manual for a given command |
+
+
+### Bonus: Helpful CLI Tools & Tips
+
+| Command            | Description                          |
+| ------------------ | ------------------------------------ |
+| `cat file`              | Display contents                |
+| `less file`             | Page-through display            |
+| `tail file`             | Last 10 lines                   |
+| `head file`             | First 10 lines                  |
