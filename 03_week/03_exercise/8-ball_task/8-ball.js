@@ -16,6 +16,11 @@ const magic8Ball = () => {
     "Better not tell you now.",
     "My sources say no.",
     "Outlook not so good.",
+    "Very doubtful.",
+    "The stars say yes.",
+    "The future is unclear.",
+    "Proceed with caution.",
+    "My intuition says no.",
     "Signs point to yes"
   ];
 
